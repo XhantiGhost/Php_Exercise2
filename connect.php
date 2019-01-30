@@ -14,3 +14,17 @@ if(!$conn) {
 }
 
 ?>
+
+<?php 
+
+//include creds
+require_once 'add.php';
+
+//establsih connection
+$db_server = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+//is connection sucessful
+if($db_server ->connect_error) {
+    die("connection failed: " . $db_server->connect_error);
+}
+?>
